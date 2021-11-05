@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use InfyOm\Generator\Utils\ResponseUtil;
-use Symfony\Component\HttpFoundation\Response;
+use Response;
 
 /**
  * @SWG\Swagger(
- *   basePath="/api/v1",
+ *   basePath="/api",
  *   @SWG\Info(
  *     title="Laravel Generator APIs",
  *     version="1.0.0",

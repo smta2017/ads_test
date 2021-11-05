@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\AdRepository;
+use App\Repositories\I\IAd;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(IAd::class, AdRepository::class);
+        
     }
 
     /**
