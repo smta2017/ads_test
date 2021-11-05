@@ -14,26 +14,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *          property="ad_id",
  *          description="ad_id",
  *          type="integer",
+ *          default=1,
  *          format="int32"
  *      ),
  *      @SWG\Property(
  *          property="tag_id",
  *          description="tag_id",
  *          type="integer",
+ *          default=1,
  *          format="int32"
  *      ),
- *      @SWG\Property(
- *          property="created_at",
- *          description="created_at",
- *          type="string",
- *          format="date-time"
- *      ),
- *      @SWG\Property(
- *          property="updated_at",
- *          description="updated_at",
- *          type="string",
- *          format="date-time"
- *      )
  * )
  */
 class AdTag extends Model

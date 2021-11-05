@@ -30,12 +30,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *          property="category_id",
  *          description="category_id",
  *          type="integer",
- *          format="int32"
+ *          format="int32",
+ *          default=1,
+ * 
  *      ),
  *      @SWG\Property(
  *          property="user_id",
  *          description="user_id",
  *          type="integer",
+ *          default=1,
  *          format="int32"
  *      ),
  *      @SWG\Property(

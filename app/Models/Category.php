@@ -15,18 +15,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *          description="name",
  *          type="string"
  *      ),
- *      @SWG\Property(
- *          property="created_at",
- *          description="created_at",
- *          type="string",
- *          format="date-time"
- *      ),
- *      @SWG\Property(
- *          property="updated_at",
- *          description="updated_at",
- *          type="string",
- *          format="date-time"
- *      )
  * )
  */
 class Category extends Model
