@@ -27,7 +27,7 @@ class AdFactory extends Factory
             'description' => $this->faker->text,
             'category_id' => $this->faker->randomDigitNotNull,
             'user_id' => $this->faker->randomDigitNotNull,
-            'start_at' => $this->faker->date('Y-m-d'),
+            'start_at' => $this->faker->dateTimeBetween('now', '+02 days'),
             'created_at' => $this->faker->date('Y-m-d H:i:s'),
             'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

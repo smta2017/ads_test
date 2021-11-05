@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Ad;
+use App\Models\User;
 use App\Repositories\BaseRepository;
 use App\Repositories\I\IAd;
 
@@ -53,5 +54,13 @@ class AdRepository extends BaseRepository implements IAd
                 $q->where('tag_id', $tag_id);
             })
             ->get();
+    }
+
+    public function getNextDayAds()
+    {
+        $users = User::whereHas('Ads', function ($q) {
+            $q->where('start_at', \Carbon\Carbon::tomorrow());
+        })->get();
+        return $users;
     }
 }
