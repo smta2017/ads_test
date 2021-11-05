@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Notification;
 
 class remainder extends Command
 {
+    protected $adRepo;
     /**
      * The name and signature of the console command.
      *
@@ -33,13 +34,7 @@ class remainder extends Command
     public function __construct(IAd $adRepo)
     {
         parent::__construct();
-
-        $users = $adRepo->getNextDayAds();
-        // $users = User::find([2,3,5]);
-        // dd($users);
-        Notification::send($users, new testNotification());
-
-        // Notification::send($users, new AdvertiserNotification());
+        $this->adRepo = $adRepo;
     }
 
     /**
@@ -49,6 +44,10 @@ class remainder extends Command
      */
     public function handle()
     {
+        $users = $this->adRepo->getNextDayAds();
+
+        Notification::send($users, new testNotification());
+
         return Command::SUCCESS;
     }
 }
